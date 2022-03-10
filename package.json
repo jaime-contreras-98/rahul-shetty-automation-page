@@ -1,0 +1,25 @@
+{
+  "name": "rahul-shetty-automation-page",
+  "version": "1.0.0",
+  "description": "Automation challenge for juniors",
+  "main": "index.js",
+  "scripts": {
+    "practiceTests": "testcafe chrome pom/tests/practice.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaimecontreras-wizeline/rahul-shetty-automation-page.git"
+  },
+  "keywords": [
+    "QA"
+  ],
+  "author": "Jaime Contreras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaimecontreras-wizeline/rahul-shetty-automation-page/issues"
+  },
+  "homepage": "https://github.com/jaimecontreras-wizeline/rahul-shetty-automation-page#readme",
+  "dependencies": {
+    "testcafe": "^1.18.4"
+  }
+}
