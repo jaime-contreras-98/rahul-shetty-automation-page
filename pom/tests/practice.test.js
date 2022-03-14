@@ -31,7 +31,7 @@ test("As a user I want to select option 2 and then option 3 on Dropdown Example 
 	await t.expect(practicePage.dropDownMenu.value).eql(STRINGS.DROPDOWN_TEXT);
 });
 
-test.skip("As a user I want to check option 1 and 2 on Checkbox Example -{smoke}",async t=>{
+test("As a user I want to check option 1 and 2 on Checkbox Example -{smoke}",async t=>{
 	await practicePage.checkBoxExample();
 
 	await t.expect(practicePage.checkBoxElement2.checked && practicePage.checkBoxElement2.checked).ok();
