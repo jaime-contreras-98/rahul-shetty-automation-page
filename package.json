@@ -4,7 +4,9 @@
   "description": "Automation challenge for juniors",
   "main": "index.js",
   "scripts": {
-    "practiceTests": "testcafe chrome pom/tests/practice.test.js"
+    "practiceTests": "testcafe chrome pom/tests/practice.test.js --reporter html:tests-reports/practice-tests-results.html",
+    "regressionTests": "testcafe chrome pom/tests/practice.test.js --test-grep 'regression' --reporter html:tests-reports/regression-tests-results.html",
+    "smokeTests": "testcafe chrome pom/tests/practice.test.js --test-grep 'smoke' --reporter html:tests-reports/smoke-tests-results.html"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,11 @@
   },
   "homepage": "https://github.com/jaimecontreras-wizeline/rahul-shetty-automation-page#readme",
   "dependencies": {
-    "testcafe": "^1.18.4"
+    "testcafe": "^1.18.4",
+    "testcafe-reporter-html": "^1.4.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
