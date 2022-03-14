@@ -28,10 +28,10 @@ test("As a user I want to type the word 'Me' on the Suggestion Class input and s
 test("As a user I want to select option 2 and then option 3 on Dropdown Example -{smoke}", async t=>{
 	await practicePage.dropDownExample();
 
-	await t.expect(practicePage.dropDownMenuElement3.innerText).eql("Option3");
+	await t.expect(practicePage.dropDownMenu.value).eql(STRINGS.DROPDOWN_TEXT);
 });
 
-test("As a user I want to check option 1 and 2 on Checkbox Example -{smoke}",async t=>{
+test.skip("As a user I want to check option 1 and 2 on Checkbox Example -{smoke}",async t=>{
 	await practicePage.checkBoxExample();
 
 	await t.expect(practicePage.checkBoxElement2.checked && practicePage.checkBoxElement2.checked).ok();
@@ -52,7 +52,7 @@ test("As a user I want to know if Displayed Example is hidden or shown -{regress
 
 	const scenarioResult = await practicePage.elementDisplayedInput.visible;
 
-	scenarioResult===true?console.log("Input element is shown!"):console.log("Input element is hidden!");
+	scenarioResult===true?console.log(MESSAGES.ELEMENT_SHOWN):console.log(MESSAGES.ELEMENT_HIDDEN);
 
 	await t.expect(scenarioResult === true || scenarioResult === false).ok();
 });

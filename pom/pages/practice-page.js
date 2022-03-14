@@ -38,7 +38,8 @@ class PracticePage{
 		await t
 			.click(this.dropDownMenu)
 			.click(this.dropDownMenuElement2)
-			.click(this.dropDownMenu);
+			.click(this.dropDownMenu)
+			.click(this.dropDownMenuElement3);
 	}
 
 	async checkBoxExample(){
