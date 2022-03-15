@@ -12,5 +12,10 @@ pipeline{
                 sh "npm install"
             }
         }
+        stage('test'){
+            steps{
+                sh "npm run ${params.suite}"
+            }
+        }
     }
 }
