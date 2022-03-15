@@ -18,7 +18,7 @@ pipeline{
             }
             post{
                 always{
-                    archiveArtifacts artifacts: 'tests-reports/practice-tests-results.html', followSymLinks: false
+                    archiveArtifacts artifacts: 'tests-reports/practice-tests-results.html', followSymlinks: false
                 }
             }
         }
